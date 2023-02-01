@@ -1,0 +1,31 @@
+###
+GET{{metadata-demo-url}}/metadata/service
+Content-Type: application/json
+platform_name: amp
+container_name: ADSS_US
+
+{}
+
+###
+GET{{metadata-demo-url}}/metadata/service
+Content-Type: application/json
+platform_name: amp
+container_name: ADSS_US
+
+{}
+
+###
+GET{{metadata-demo-url}}/metadata/service
+Content-Type: application/json
+platform_name: dispatcher
+container_name: amp-authentication-logon
+
+{}
+
+###
+GET{{metadata-demo-url}}/metadata/service
+Content-Type: application/json
+platform_name: dispatcher
+container_name: amp-authentication-logon
+
+{}

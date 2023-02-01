@@ -1,0 +1,15 @@
+###
+GET{{metadata-demo-url}}/metadata/entity-variable
+Content-Type: application/json
+platform_name: maas
+container_name: adb
+
+{}
+
+###
+GET{{metadata-demo-url}}/metadata/entity-variable
+Content-Type: application/json
+platform_name: maas
+container_name: authentication
+
+{}

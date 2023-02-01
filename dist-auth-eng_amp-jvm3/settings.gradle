@@ -1,0 +1,3 @@
+rootProject.name = 'dist-auth-eng_amp-jvm3'
+include 'metadata-demo-service'
+

@@ -1,0 +1,24 @@
+// this is build.gradle.kts file
+//import org.jetbrains.kotlin.ir.backend.js.compile
+
+plugins{
+    id("com.aexp.amp.gradle.plugin.dependency.management.spring-boot")
+    id("com.aexp.amp.gradle.plugin.java-build")
+}
+
+dependencies {
+    api(project.commons.ampCommons)
+    api(libs.service.connector.webstarter){
+        exclude(group = "org.slf4j", module = "slf4j-api")
+        exclude(group = "org.springframewrok", module = "spring-core")
+        exclude(group = "org.springframework", module = "spring-context")
+        exclude(group = "ch.qos.logback", module = "logback-classic")
+        exclude(group = "com.sun.java", module = "tools")
+        exclude(group = "com.graphql-java", module = "graphql-java")
+    }
+
+    api(libs.javax.xml.soap)
+    api(libs.saaj.impl)
+}
+
+description = "service-connector"

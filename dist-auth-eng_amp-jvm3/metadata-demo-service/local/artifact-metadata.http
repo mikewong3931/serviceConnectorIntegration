@@ -1,0 +1,7 @@
+###
+GET{{metadata-demo-url}}/metadata/artifact
+Content-Type: application/json
+platform_name: amp
+continer_name: test-payment-artifacts
+
+{}

@@ -1,0 +1,247 @@
+###
+GET{{metadata-demo-url}}/metadata/helper
+Content-Type: application/json
+platform_name: amp
+contianer_name: payment_events
+process_name: prepareUnprotectedData
+
+{
+   "message": {
+       "event_summary" : {
+       "unique_message_identifier" : "ZAPP1234567890",
+       "message_timestamp": "2021-04-03T01:50:13.862Z",
+         "payment_mode" : "PUSH",
+         "notification_type" : "PROCESSED",
+         "message_format_version" : 1
+       },
+     "event_identifier_info": {
+     "internal_payment_identifier": "12XYIwfJ_NNeA-enjEQX7A00-00MOM82CA0",
+       "payment_confirmation_identifier" : "M0738",
+       "bank_payment_identifier" : "abcd12345"
+
+     },
+     "payment_event_info": {
+     "pa_payment_type_code":  135,
+     "instrument_code": "WALLET",
+      "instrument_channel_code" : "PAYPAL",
+       "payment_guaranteed_funds_indicator": true,
+       "scheduled_payment_indicator" : "IMMEDIATE",
+       "bank_city" : "PHOENIX",
+       "bank_state" : "AZ",
+       "capture_center_code" : "055",
+       "customer_bank_account_identifier" : "101010101022020000",
+       "customer_bank_routing_number": "987654321",
+       "foreign_payment_ind": true
+     },
+     "customer_product_info": {
+       "customer_identifier": "xx3451234512345"
+     },
+     "event_timestamps": {
+     "payment_transaction_date":  "2021-04-03",
+       "payment_setup_date" : "2022-05-03",
+       "bank_enrollment_date" : "1999-12-31",
+       "cas_prsntmnt_dt" : "2022-05-03",
+       "cas_pymt_cptr_dt" : "2022-05-03"
+     },
+     "amounts" : {
+     "bill_amt_in_bill_curr" :  "100.00",
+     "bill_currency" :  "USD",
+     "bill_country" :  "US",
+     "cas_fxcf_pd_to_usd" :  "1.0000000",
+       "cas_fxcf_usd_to_bill" :  "1.0000000",
+       "cas_market_code" :  "037",
+       "cas_tot_usd_pay_am" :  "1234.56",
+       "pymt_currency": "CAD",
+       "pymt_amt_in_pymt_curr" : "1234.56"
+     },
+     "derived": {
+     "cas_account_category_code" :  "CRD",
+     "cas_ach_source" :  "98",
+     "cas_count_of_returns" :  0,
+     "cas_event_priority" : "B",
+       "cas_truncation_flag" : "X",
+       "cas_pa_mtch_key" : "DDAFB7F063C00000",
+       "cas_payment_mode" : "PUSH",
+       "cas_payment_status" : "022",
+       "cas_payment_code" : "C1",
+       "cas_pymt_vcle_type" : "10",
+       "cas_tpf_prcs_timestamp" : "2022-07-07T12:59:59.123Z",
+       "cas_transaction_type_code" : "01"
+     }
+   }
+}
+
+###
+GET{{metadata-demo-url}}/metadata/helper
+Content-Type: application/json
+platform_name: amp
+contianer_name: payment_events
+process_name: mergeProtectedData
+
+{
+  "message": {
+    "event_summary" : {
+      "unique_message_identifier" : "ZAPP1234567890",
+      "message_timestamp": "2021-04-03T01:50:13.862Z",
+      "payment_mode" : "PUSH",
+      "notification_type" : "PROCESSED",
+      "message_format_version" : 1
+    },
+    "event_identifier_info": {
+      "internal_payment_identifier": "12XYIwfJ_NNeA-enjEQX7A00-00MOM82CA0",
+      "payment_confirmation_identifier" : "M0738",
+      "bank_payment_identifier" : "abcd12345"
+
+    },
+    "payment_event_info": {
+      "pa_payment_type_code":  135,
+      "instrument_code": "WALLET",
+      "instrument_channel_code" : "PAYPAL",
+      "payment_guaranteed_funds_indicator": true,
+      "scheduled_payment_indicator" : "IMMEDIATE",
+      "bank_city" : "PHOENIX",
+      "bank_state" : "AZ",
+      "capture_center_code" : "055",
+      "customer_bank_account_identifier" : "101010101022020000",
+      "customer_bank_routing_number": "987654321",
+      "foreign_payment_ind": true
+    },
+    "customer_product_info": {
+      "customer_identifier": "xx3451234512345"
+    },
+    "event_timestamps": {
+      "payment_transaction_date":  "2021-04-03",
+      "payment_setup_date" : "2022-05-03",
+      "bank_enrollment_date" : "1999-12-31",
+      "cas_prsntmnt_dt" : "2022-05-03",
+      "cas_pymt_cptr_dt" : "2022-05-03"
+    },
+    "amounts" : {
+      "bill_amt_in_bill_curr" :  "100.00",
+      "bill_currency" :  "USD",
+      "bill_country" :  "US",
+      "cas_fxcf_pd_to_usd" :  "1.0000000",
+      "cas_fxcf_usd_to_bill" :  "1.0000000",
+      "cas_market_code" :  "037",
+      "cas_tot_usd_pay_am" :  "1234.56",
+      "pymt_currency": "CAD",
+      "pymt_amt_in_pymt_curr" : "1234.56"
+    },
+    "derived": {
+      "cas_account_category_code" :  "CRD",
+      "cas_ach_source" :  "98",
+      "cas_count_of_returns" :  0,
+      "cas_event_priority" : "B",
+      "cas_truncation_flag" : "X",
+      "cas_pa_mtch_key" : "DDAFB7F063C00000",
+      "cas_payment_mode" : "PUSH",
+      "cas_payment_status" : "022",
+      "cas_payment_code" : "C1",
+      "cas_pymt_vcle_type" : "10",
+      "cas_tpf_prcs_timestamp" : "2022-07-07T12:59:59.123Z",
+      "cas_transaction_type_code" : "01"
+    }
+  },
+  "protectedData": [
+    {
+      "atrributeName" : "customer_identifier",
+      "sdeType" : "CM15",
+      "secureText": "protected_customer_identifier",
+      "hash" : "hash_customer_identifier"
+    }]
+}
+
+###
+GET{{metadata-demo-url}}/metadata/helper
+Content-Type: application/json
+platform_name: amp
+contianer_name: payment_events
+process_name: standardizePaymentEventPayload
+
+{
+   "message": {
+       "event_summary" : {
+       "unique_message_identifier" : "ZAPP1234567890",
+       "message_timestamp": "2021-04-03T01:50:13.862Z",
+         "payment_mode" : "PUSH",
+         "notification_type" : "PROCESSED",
+         "message_format_version" : 1
+       },
+     "event_identifier_info": {
+     "internal_payment_identifier": "12XYIwfJ_NNeA-enjEQX7A00-00MOM82CA0",
+       "payment_confirmation_identifier" : "M0738",
+       "bank_payment_identifier" : "abcd12345"
+
+     },
+     "payment_event_info": {
+     "pa_payment_type_code":  135,
+     "instrument_code": "WALLET",
+      "instrument_channel_code" : "PAYPAL",
+       "payment_guaranteed_funds_indicator": true,
+       "scheduled_payment_indicator" : "IMMEDIATE",
+       "bank_city" : "PHOENIX",
+       "bank_state" : "AZ",
+       "capture_center_code" : "055",
+       "customer_bank_account_identifier" : "101010101022020000",
+       "customer_bank_routing_number": "987654321",
+       "foreign_payment_ind": true
+     },
+     "customer_product_info": {
+       "customer_identifier": "xx3451234512345"
+     },
+     "event_timestamps": {
+     "payment_transaction_date":  "2021-04-03",
+       "payment_setup_date" : "2022-05-03",
+       "bank_enrollment_date" : "1999-12-31",
+       "cas_prsntmnt_dt" : "2022-05-03",
+       "cas_pymt_cptr_dt" : "2022-05-03"
+     },
+     "amounts" : {
+     "bill_amt_in_bill_curr" :  "100.00",
+     "bill_currency" :  "USD",
+     "bill_country" :  "US",
+     "cas_fxcf_pd_to_usd" :  "1.0000000",
+       "cas_fxcf_usd_to_bill" :  "1.0000000",
+       "cas_market_code" :  "037",
+       "cas_tot_usd_pay_am" :  "1234.56",
+       "pymt_currency": "CAD",
+       "pymt_amt_in_pymt_curr" : "1234.56"
+     },
+     "derived": {
+     "cas_account_category_code" :  "CRD",
+     "cas_ach_source" :  "98",
+     "cas_count_of_returns" :  0,
+     "cas_event_priority" : "B",
+       "cas_truncation_flag" : "X",
+       "cas_pa_mtch_key" : "DDAFB7F063C00000",
+       "cas_payment_mode" : "PUSH",
+       "cas_payment_status" : "022",
+       "cas_payment_code" : "C1",
+       "cas_pymt_vcle_type" : "10",
+       "cas_tpf_prcs_timestamp" : "2022-07-07T12:59:59.123Z",
+       "cas_transaction_type_code" : "01"
+     }
+   }
+}
+
+###
+GET{{metadata-demo-url}}/metadata/helper
+Content-Type: application/json
+platform_name: amp
+contianer_name: risky_events_tag
+process_name: prepareUnprotectedData
+
+{
+  "test1": "hello"
+}
+
+###
+GET{{metadata-demo-url}}/metadata/helper
+Content-Type: application/json
+platform_name: amp
+contianer_name: risky_events_tag
+process_name: mergeProtectedData
+
+{
+  "test1": "hello"
+}

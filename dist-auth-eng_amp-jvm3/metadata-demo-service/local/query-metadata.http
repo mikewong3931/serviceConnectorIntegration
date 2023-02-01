@@ -1,0 +1,11 @@
+###
+GET{{metadata-demo-url}}/metadata/query/logical
+Content-Type: application/text
+
+read_client_risky_events
+
+###
+GET{{metadata-demo-url}}/metadata/query/physical
+Content-Type: application/text
+
+findBy_client_risky_events

@@ -1,0 +1,211 @@
+{
+  "serviceMetadata" : {
+    "serviceType" : "REST",
+    "serviceRequestMethod": "POST",
+    "endpointUri": {
+      "e1" : "https://ampauthenticatormodel-dev.aexp.com/us/all/all/all"
+    },
+    "serviceNotAvailableAction": "CONTINUE",
+    "responseParsingDisable": false
+  },
+  "timeoutConfiguration": {
+    "totalExchangeTimeout" : {
+      "e1": 5000
+    }
+  },
+  "retryConfiguration": {
+    "maxConnectionAttempts": 3,
+    "httpStatusCodesForRetry": [
+      500,
+      502,
+      503,
+      512
+    ]
+  },
+  "requestGenerationSchema": {
+    "type": "object",
+    "properties": {
+      "arguments": {
+        "type": "object",
+        "properties": {
+          "cstone_last_updatetm": {
+            "type": "Double",
+            "id": "$.input1.cstone_last_updatetm",
+            "defaultValue": ""
+          },
+          "cas_pkey": {
+            "type" : "Long",
+            "id" : "$.input1.cas.pkey",
+            "defaultValue" : ""
+          },
+          "uid": {
+            "type" : "String",
+            "id" : "$.input1.vid",
+            "defaultValue" : ""
+          },
+          "cm11": {
+            "type": "string",
+            "id": "$.input1.cm11",
+            "defaultVaule": ""
+          },
+          "cm13": {
+            "type" : "string",
+            "id": "$.input1.cm13",
+            "defaultVaule": ""
+          },
+          "cm15": {
+            "type" : "string",
+            "id": "$.input1.cm15",
+            "defaultVaule": ""
+          },
+          "time_of_day_in" : {
+            "type": "Integer",
+            "id" : "$.input1.time_of_day_in",
+            "defaultValue" : ""
+          },
+          "trans_dt" : {
+            "type": "Integer",
+            "id" : "$.input1.trans_dt",
+            "defaultValue" : ""
+          },
+          "cnvrsaton_id" : {
+            "type": "string",
+            "id" : "$.input1.org_src_txn",
+            "defaultValue" : ""
+          },
+          "org_src_txn" : {
+            "type": "String",
+            "id" : "$.input1.org_src_txn",
+            "defaultValue" : ""
+          },
+          "src_typ" : {
+            "type": "Integer",
+            "id" : "$.input1.src_typ",
+            "defaultValue" : ""
+          },
+          "gbm_pan_model_id" : {
+            "type": "String",
+            "id" : "$.input1.gbm_pan_model_id",
+            "defaultValue" : ""
+          },
+          "panda_myca_model" : {
+            "type": "Double",
+            "id" : "$.input1.panda_myca_model",
+            "defaultValue" : ""
+          },
+          "gbm_scr_prior_to_adj" : {
+            "type": "double",
+            "id" : "$.input1.gbm_scr_prior_to_adj",
+            "defaultValue" : ""
+          },
+          "gen_panda_rul_num" : {
+            "type": "Integer",
+            "id" : "$.input1.gen_panda_rul_num",
+            "defaultValue" : ""
+          },
+          "panda_rsk_resn" : {
+            "type": "String",
+            "id" : "$.input1.gpanda_rsk_resn",
+            "defaultValue" : ""
+          },
+          "logon_sess_id" : {
+            "type": "String",
+            "id" : "$.input1.logon_sess_id",
+            "defaultValue" : ""
+          },
+          "btch_cd_msmtch_in" : {
+            "type": "Integer",
+            "id" : "$.input1.btch_cd_msmtch_in",
+            "defaultValue" : ""
+          },
+          "cpp_compromise_in" : {
+            "type": "Integer",
+            "id" : "$.input1.cpp_compromise_in",
+            "defaultValue" : ""
+          },
+          "cpp_key_frd_in" : {
+            "type": "Integer",
+            "id" : "$.input1.cpp_key_frd_in",
+            "defaultValue" : ""
+          },
+          "cpp_rtl_frd_in" : {
+            "type": "Integer",
+            "id" : "$.input1.cpp_rtl_frd_in",
+            "defaultValue" : ""
+          },
+          "cpp_oil_frd_in" : {
+            "type": "Integer",
+            "id" : "$.input1.cpp_oil_frd_in",
+            "defaultValue" : ""
+          },
+          "cpp_airline_frd_in" : {
+            "type": "Integer",
+            "id" : "$.input1.cpp_airline_frd_in",
+            "defaultValue" : ""
+          },
+          "cpp_moto_frd_in" : {
+            "type": "Integer",
+            "id" : "$.input1.cpp_moto_frd_in",
+            "defaultValue" : ""
+          },
+          "cpp_tlcm_frd_in" : {
+            "type": "Integer",
+            "id" : "$.input1.cpp_tlcm_frd_in",
+            "defaultValue" : ""
+          },
+          "cpp_cross_border_frd_in" : {
+            "type": "Integer",
+            "id" : "$.input1.cpp_cross_border_frd_in",
+            "defaultValue" : ""
+          },
+          "cpp_risk_seq_in" : {
+            "type": "Integer",
+            "id" : "$.input1.cpp_risk_seq_in",
+            "defaultValue" : ""
+          },
+          "ip_ad_cust_frd_rt" : {
+            "type": "Double",
+            "id" : "$.input1.ip_ad_cust_frd_rt",
+            "defaultValue" : ""
+          },
+          "ciumc_trans_in" : {
+            "type": "Integer",
+            "id" : "$.input1.ciumc_trans_in",
+            "defaultValue" : ""
+          },
+          "day_since_id_ovrrd" : {
+            "type": "Integer",
+            "id" : "$.input1.day_since_id_ovrrd",
+            "defaultValue" : ""
+          },
+          "day_since_card_secr_cs_fail_in" : {
+            "type": "Integer",
+            "id" : "$.input1.day_since_card_secr_cs_fail_in",
+            "defaultValue" : ""
+          },
+          "day_since_card_secr_cs_suc_in" : {
+            "type": "Integer",
+            "id" : "$.input1.day_since_card_secr_cs_suc_in",
+            "defaultValue" : ""
+          },
+          "day_since_pers_secr_key_fail" : {
+            "type": "Integer",
+            "id" : "$.input1.day_since_pers_secr_key_fail",
+            "defaultValue" : ""
+          },
+          "day_since_cm_vrfy_chrg" : {
+            "type": "Integer",
+            "id" : "$.input1.day_since_cm_vrfy_chrg",
+            "defaultValue" : ""
+          },
+          "day_since_cd_pstl_chng_myca" : {
+            "type": "Integer",
+            "id" : "$.input1.dday_since_cd_pstl_chng_myca",
+            "defaultValue" : ""
+          }
+        }
+      }
+    }
+  }
+
+}

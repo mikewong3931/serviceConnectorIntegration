@@ -1,0 +1,9 @@
+rootProject.name = 'dist-auth-eng_amp-jvm'
+include 'amp-service-connector'
+include 'metadata'
+include 'metadata-demo-service'
+include 'metadata-demo-service'
+include 'metadata'
+include 'metadata-demo-service'
+include 'metadata-demo-service'
+

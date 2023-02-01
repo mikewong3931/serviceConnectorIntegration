@@ -1,0 +1,21 @@
+//this is build.gradle.kts
+plugins{
+    id("com.aexp.amp.gradle.plugin.dependency.management.spring-boot")
+    id("com.aexp.amp.gradle.plugin.java-build")
+    id("com.gorylenko.gradle-git-properties")
+    id("org.springframework.boot")
+
+}
+
+dependencies {
+    api(projects.dataProtectionCrypto)
+    api(projects.metadata.metadataExecutor)
+    api(projects.metadata.metadataCommonImpl)
+
+    implementation(libs.commons.beanutils)
+    implementation(libs.jetty.alpn.java.server)
+    implementation(libs.jetty.httpe.server)
+    implementation(libs.payment.events.model)
+}
+
+description = "metadata-demo-service"
